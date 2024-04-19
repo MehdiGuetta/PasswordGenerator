@@ -21,9 +21,12 @@ function createPassword(){
 
 function copyPasswword(){
     passwordBox.select();
-    const copiedPass = document.execCommand('copy');
+    document.execCommand('copy');
 
-    if(copiedPass){
-        alert('Password has been copied to clipboard');
+    if(passwordBox.value == ''){
+        alert("Can't copy an empty field");
+    } 
+    else {
+        alert("Password has been copied to clipboard");
     }
 }
