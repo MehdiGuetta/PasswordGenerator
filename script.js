@@ -21,5 +21,9 @@ function createPassword(){
 
 function copyPasswword(){
     passwordBox.select();
-    document.execCommand('copy');
+    const copiedPass = document.execCommand('copy');
+
+    if(copiedPass){
+        alert('Password has been copied to clipboard');
+    }
 }
